@@ -16,7 +16,7 @@ body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:v
 .find{color:#fff;font-size:13px;font-weight:700;padding:12px 0;flex:1 1 320px}
 .find small{font-weight:400;opacity:.7;margin-left:8px;font-size:11px}
 .tabs .clear{background:rgba(255,255,255,.15);color:#fff;border:0;border-radius:6px;padding:7px 12px;font-size:11px;font-weight:700;cursor:pointer}
-.content{padding:20px 28px;max-width:1500px;margin:0 auto}
+.content{padding:20px clamp(14px,2vw,32px)}
 .kpi-grid{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px}
 .kpi-card{background:#fff;border:.5px solid var(--border);border-radius:12px;padding:18px 24px;flex:1;min-width:170px}
 .kpi-label{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
@@ -67,11 +67,11 @@ tbody tr{cursor:pointer}tr:hover td{background:var(--surface2)}tr.sel td{backgro
 .q-col{background:#fef9ec}
 tfoot td{font-weight:700;border-top:2px solid var(--border);background:var(--surface2)}
 .mixbar{display:inline-block;height:6px;border-radius:3px;background:var(--new);vertical-align:middle;margin-right:6px}
-.pair{display:grid;grid-template-columns:minmax(0,2.1fr) minmax(0,1fr);gap:14px;align-items:stretch}
-.pair>.card{display:flex;flex-direction:column}.pair .fig{flex:1;min-height:340px;height:auto}
+.pair{display:grid;grid-template-columns:minmax(0,960px) minmax(0,1fr);gap:14px;align-items:stretch}
+.pair>.card{display:flex;flex-direction:column;min-width:0}.pair .fig{flex:1;min-height:380px;height:auto}
 table.xl{font-size:11px;font-variant-numeric:tabular-nums}
-table.xl th{background:#1F3864;color:#fff;text-align:center;font-size:10.5px;text-transform:none;letter-spacing:0;padding:7px 8px;border-bottom:0;cursor:default}
-table.xl td{padding:5px 6px;border-bottom:1px solid #edf1f6;white-space:nowrap}
+table.xl th{background:#1F3864;color:#fff;text-align:center;font-size:10.5px;text-transform:none;letter-spacing:0;padding:8px 10px;border-bottom:0;cursor:default}
+table.xl td{padding:6px 10px;border-bottom:1px solid #edf1f6;white-space:nowrap}
 table.xl td.l{font-weight:600}
 table.xl tbody tr:hover td{background:#f5f8fc}
 table.xl tbody tr.sel td{background:#fef2f2}
@@ -81,7 +81,7 @@ table.xl td.db span{position:absolute;top:3px;bottom:3px;left:2px;background:lin
 table.xl td.db span.n{background:linear-gradient(90deg,#fecaca,#ef4444);left:auto;right:auto}
 table.xl td.db b{position:relative;z-index:1;font-weight:500}
 table.xl .g{color:#3a8a2e;font-weight:600}table.xl .r{color:#dc2626;font-weight:600}
-@media(max-width:1150px){.pair{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:1500px){.pair{grid-template-columns:minmax(0,1fr)}}
 .tip{position:fixed;pointer-events:none;background:#0f172a;color:#fff;padding:8px 10px;border-radius:8px;font-size:11px;line-height:1.5;opacity:0;transition:opacity .12s;z-index:300;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.2)}
 .foot{font-size:10px;color:var(--muted);padding:4px 0 20px}
 @media(max-width:900px){.grid-2{grid-template-columns:minmax(0,1fr)}.content{padding:14px}.header{padding:14px}.tabs{padding:0 14px}.fig{height:300px}}
